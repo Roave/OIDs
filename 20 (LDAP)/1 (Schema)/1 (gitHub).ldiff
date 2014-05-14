@@ -1,0 +1,10 @@
+dn: cn=gitHub,cn=schema,cn=config
+objectClass: olcSchemaConfig
+cn: gitHub
+# 1 (OLC Object Classes)
+## 1 (gitHubUser)
+olcObjectClasses: ( 1.3.6.1.4.43587.20.1.1.1.1.1 NAME 'gitHubUser' SUP top AUXILIARY DESC 'MANDATORY: GitHub User objectclass' MUST ( gitHubUsername $ uid ) )
+# 2 (OLC Attribute Types)
+## 1 (gitHubUsername)
+olcAttributeTypes: ( 1.3.6.1.4.43587.20.1.1.1.2.1 NAME 'gitHubUsername' DESC 'MANDATORY: GitHub Username' EQUALITY caseIgnoreMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.44 )
+
